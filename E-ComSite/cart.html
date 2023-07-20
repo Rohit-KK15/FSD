@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cart Page</title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+       body {
+    padding-top: 60px;
+}
+
+.cart-content {
+    margin-top: 50px;
+}
+
+.cart-item {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.cart-item img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+.cart-item .item-details {
+    display: inline-block;
+    vertical-align: top;
+    width: 70%;
+}
+
+.cart-item .item-details h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.cart-item .item-details p {
+    margin-bottom: 0;
+}
+
+.cart-total {
+    text-align: right;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.btn-checkout {
+    background-color: #007bff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-checkout:hover {
+    border: 1px solid #05e6ad;
+    background: #05e6ad;
+    transition: 1s;
+}
+
+.btn-buynow {
+    position: absolute;
+    bottom: 80px;
+    right: 110px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-buynow:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 767px) {
+    body {
+        padding-top: 120px;
+    }
+
+    .cart-item img {
+        width: 80px;
+        height: 80px;
+        margin-right: 10px;
+    }
+
+    .cart-item .item-details {
+        width: 60%;
+    }
+
+    .btn-buynow {
+        position: fixed;
+        bottom: 50px;
+        right: 110px;
+    }
+}
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Electronics for you</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="cart.html">Cart</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Cart Content -->
+    <div class="container cart-content">
+        <h1>Cart</h1>
+        <div class="cart-item">
+            <img src="product2.jpg" alt="Item 1">
+            <div class="item-details">
+                <h4>Samsung Galaxy S23 Ultra </h4>
+                <p>Price: ₹1,24,999</p>
+                <p>Quantity: 1</p>
+            </div>
+        </div>
+        <div class="cart-item">
+            <img src="2.jpg" alt="Item 2">
+            <div class="item-details">
+                <h4>Samsung Galaxy Book3 Pro 360</h4>
+                <p>Price: ₹1,29,990</p>
+                <p>Quantity: 1</p>
+            </div>
+        </div>
+        <div class="cart-total">
+            Total: ₹2,54,989
+        </div>
+        <button class="btn btn-checkout">Buy Now</button>
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
