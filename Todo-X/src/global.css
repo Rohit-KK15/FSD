@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #b5a886;
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+
+main {
+  min-height: calc(100vh - 120px);
+}
+button {
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+button:hover {
+  filter: brightness(90%);
+}
+footer {
+  text-align: center;
+  width: min(600px, 90%);
+  margin: 0 auto;
+  background-color: #0000002a;
+  padding: 10px;
+  font-weight: bold;
+  color: #444;
+  text-transform: capitalize;
+}
