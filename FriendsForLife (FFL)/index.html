@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Friends Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2c2c2c;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color:#191919;
+            padding: 20px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+        h2{
+            margin:0;
+            text-align: center;
+            color:#ffffff;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 960px;
+            margin: 20px auto;
+            background-color: #191919;
+            padding: 20px;
+            box-sizing: border-box;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 20px;
+            position: relative;
+        }
+
+        .friend {
+            border: 1px solid #191919;
+            border-radius: 4px;
+            padding: 10px;
+            background-color: #000000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .friend:hover {
+            background-color: #707070;
+        }
+
+        .friend h3 {
+            margin-top: 0;
+            color: #ffffff;
+            font-size: 18px;
+        }
+
+        .friend p {
+            margin-top: 0;
+            color: #ffffff;
+            font-size: 14px;
+        }
+
+        .friendship-paragraph {
+            text-align: center;
+            margin-bottom: 30px;
+            display: block;
+            color: #DCD5DC;
+        }
+
+        .centered-image {
+            position: relative;
+            width: 100%;
+            height: 200px; /* Adjust the height of the image container as per your requirement */
+            overflow: hidden;
+        }
+
+        .centered-image img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 100%;
+            max-height: 100%;
+        }
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Destinations for friends</h1>
+    </header>
+     <h2>Places to visit</h2>
+    <div class="container">
+        <div class="friend">
+            <h3>Araku</h3>
+            <p>India</p>
+            <p>Valley with mountains</p>
+            <div class="centered-image">
+                <img src="download.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="friend">
+            <h3>Maldives</h3>
+            <p>Near India</p>
+            <p>Island with blue water</p>
+            <div class="centered-image">
+                <img src="download (1).jpg" alt="">
+            </div>
+        </div>
+
+        <div class="friend">
+            <h3>Dubai</h3>
+            <p>UAE</p>
+            <p>City</p>
+            <div class="centered-image">
+                <img src="download (2).jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="friendship-paragraph">
+        <p>Friendship is a beautiful bond that brings joy, support, and shared experiences. True friends are there for you through thick and thin, lending a listening ear and offering a helping hand. Cherish the special connections you have and create lasting memories with your friends.</p>
+    </div>
+    <h2>Adventure Time</h2>
+    <div class="container">
+        <div class="friend">
+            <h3> Parasailing</h3>
+            <p>Parasailing is one of the best sports for those who love flying and speed!</p>
+            <div class="centered-image">
+                <img src="1.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="friend">
+            <h3> Scuba Diving</h3>
+            <p> marine life to be explored</p>
+            <div class="centered-image">
+                <img src="2.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="friend">
+            <h3> Mountain Biking</h3>
+            <p>Try mountain biking if you are bored of the usual adventures</p>
+            <div class="centered-image">
+                <img src="3.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
