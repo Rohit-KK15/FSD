@@ -35,8 +35,9 @@ methods: {
 }
 
 .v-btn{
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Poppins';
   font-weight: bold;
+  font-size: medium;
   color: #adabab;
   transition: 0.3s;
   text-transform: capitalize;

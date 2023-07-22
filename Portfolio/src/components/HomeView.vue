@@ -9,9 +9,7 @@
       <div class="roleBox">
         <span class="text">I'm a </span>
         <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=500&size=25&duration=3000&pause=2000&color=4C55F7&background=16FF0000&width=435&lines=Web+Developer;Mobile+Developer;Gamer" alt="Typing SVG" /></a>
-
       </div>
-      
     </div>
   </v-app>
 </template>
@@ -29,20 +27,6 @@ export default {
     };
   },
   methods: {
-
-    startTyping(){
-      setTimeout(() => {
-        this.role = "Web Developer";
-      }, 0);
-
-      setTimeout(() => {
-        this.role = "Mobile Developer";
-      }, 4000);
-
-      setTimeout(() => {
-        this.role = "Gamer";
-      }, 8000);
-    },
 
     makeItRain() {
       // Clear out everything
@@ -112,8 +96,6 @@ export default {
     },
   },
   mounted() {
-    this.startTyping();
-    setInterval(this.startTyping, 12000);
     this.makeItRain();
   }
 }
@@ -227,12 +209,13 @@ export default {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  margin: 0 10% 0 10%;
 }
 
 .name h1{
   font-family: bigOver;
   text-align: left;
-  font-size: min(6rem,15vw);
+  /* font-size: min(6rem,15vw); */
   color: #ff2b2b;
   background-image: -webkit-linear-gradient(45deg, rgba(204,62,183,1) 0%, rgba(47,99,190,1) 100%);
   -webkit-background-clip: text;
@@ -241,7 +224,8 @@ export default {
   font-weight: bolder;
   stroke: black;
   stroke-width: 2px;
-  font-size: 70px;
+  font-size: 4.5rem;
+  /* margin: 0 10% 0 10%; */
 }
 
 .name h2{

@@ -1,6 +1,8 @@
 <template>
-    <v-app id="projects" style="background: transparent;">
-        <h1>All My Projects</h1>
+    <v-app style="background: transparent;" id="projects">
+        <div class="about-container">
+            <h1>Projects View</h1>
+        </div>
     </v-app>
 </template>
 
@@ -8,4 +10,17 @@
 </script>
 
 <style scoped>
+
+.about-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    width: 100%;
+}
+
+.about-container h1{
+    color: #fff;
+}
+
 </style>
