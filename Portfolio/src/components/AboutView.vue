@@ -7,7 +7,7 @@
                     <img src="../assets/candid.jpg" alt="">
                     <span class="circle-spin"></span>
                 </div>
-                <u><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=700&size=35&duration=3000&pause=2000&color=4C55F7&center=true&vCenter=true&width=435&lines=Mobile+Developer;Web+Developer" alt="Typing SVG" /></a></u>
+                <img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=700&size=35&duration=3000&pause=2000&color=4C55F7&center=true&vCenter=true&width=435&lines=Mobile+Developer;Web+Developer" alt="Typing SVG" />
                 <div class="about-content">
                     <p>I am an 18-year-old self-taught developer from India. Proficient in building websites and mobile apps with a knack for problem-solving. Always eager to acquire new skills and stay ahead. Beyond coding, I find joy in music, games, cricket, and indulging in captivating movies and series. A tech enthusiast on an exciting journey of continuous growth and creativity.</p>
                 </div>
@@ -28,7 +28,7 @@
                             <div class="education-content">
                                 <div class="content">
                                     <div class="year">
-                                        <i class='bx bxs-calendar'></i>2019 - 2022
+                                        <i class='bx bxs-calendar'></i>2022 - 2025
                                     </div>
                                     <h3>B.tech - Andhra University</h3>
                                     <p> Currently, I am pursuing B.tech in Computer Science Engineering at Andhra University.</p>
@@ -122,15 +122,19 @@
     animation: aboutSpinner 8s linear infinite;
 }
 
-.about-container .about-content{
-    text-align: center;
+.about-me .about-content{
+    border: 2px solid #343434;
+    border-radius: 8px;
+    padding: 20px;
+    /* text-align: center; */
 }
 
 .about-content p{
     color: #fff;
     font-family: 'Poppins';
-    font-size: 1.4rem;
-    margin: .5rem 0 3rem;
+    font-size: clamp(100%, 1.4rem, 3vw);
+    /* font-size: 1.4rem; */
+    /* margin: 1rem 1rem 3rem; */
 }
 
 .education{
