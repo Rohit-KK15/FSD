@@ -1,5 +1,5 @@
 <template>
-  <div style="background: linear-gradient(to bottom, #202020, #111119);;">
+  <div style="background: linear-gradient(to bottom, #202020, #111119);width: 100%;">
     <HomeView />
     <AboutView />
     <ProjectsView />
