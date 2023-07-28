@@ -4,11 +4,11 @@
       <div class="rain front-row" ref="frontRow"></div>
     <div class="rain back-row" style="display: block;" ref="backRow"></div>
     <div class="name">
-      <h2>Hey, I'm</h2>
+      <h2>👋 Hey, I'm</h2>
       <h1>Rohit Keerthikanth</h1>
       <div class="roleBox">
-        <span class="text">I'm a </span>
-        <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=500&size=25&duration=3000&pause=2000&color=4C55F7&background=16FF0000&width=435&lines=Web+Developer;Mobile+Developer;Gamer" alt="Typing SVG" /></a>
+          <span class="text">I'm a </span>
+          <img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=500&size=25&duration=3000&pause=1000&color=4C55F7&vCenter=true&width=230&lines=Web+Developer;Mobile+Developer;Gamer" alt="Typing SVG" />
       </div>
     </div>
   </v-app>
@@ -24,6 +24,7 @@ export default {
     return {
       role:"",
       increment: 0,
+      number: 100,
     };
   },
   methods: {
@@ -37,7 +38,7 @@ export default {
 
       this.increment = 0;
 
-      while (this.increment < 100) {
+      while (this.increment < this.number) {
         // Couple random numbers to use for various randomizations
         // Random number between 98 and 1
         const randoHundo = Math.floor(Math.random() * (98 - 1 + 1) + 1);
@@ -94,10 +95,25 @@ export default {
       this.$refs.frontRow.innerHTML = '';
       this.$refs.backRow.innerHTML = '';
     },
+
+    checkScreenWidth(){
+    const width = window.innerWidth;
+    if(width <= 700){
+      this.number = 0;
+    }
   },
+  },
+
+
   mounted() {
+    this.checkScreenWidth();
+    window.addEventListener('resize', this.checkScreenWidth);
     this.makeItRain();
-  }
+  },
+  beforeUnmount() {
+    // Remove the event listener to avoid memory leaks
+    window.removeEventListener('resize', this.checkScreenWidth);
+  },
 }
 </script>
 
@@ -178,10 +194,6 @@ export default {
   animation: splat 0.5s linear infinite;
 }
 
-.v-app.splat-toggle .splat {
-  display: block;
-}
-
 @keyframes splat {
   0% {
     opacity: 1;
@@ -207,15 +219,14 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   overflow: hidden;
   margin: 0 10% 0 10%;
 }
 
 .name h1{
   font-family: bigOver;
-  text-align: left;
-  /* font-size: min(6rem,15vw); */
+  text-align: center;
+  font-size: min(4.5rem,9vw);
   color: #ff2b2b;
   background-image: -webkit-linear-gradient(45deg, rgba(204,62,183,1) 0%, rgba(47,99,190,1) 100%);
   -webkit-background-clip: text;
@@ -224,41 +235,36 @@ export default {
   font-weight: bolder;
   stroke: black;
   stroke-width: 2px;
-  font-size: 4.5rem;
-  /* margin: 0 10% 0 10%; */
 }
 
 .name h2{
   font-family: Arial, Helvetica, sans-serif;
-  text-align: left;
+  text-align: center;
+  font-size: min(24px, 1.25rem);
   color: rgb(255, 255, 255);
 }
 
 
 
-.roleBox{
-  margin-left: 200px;
-  display: inline-flex;
+.name .roleBox{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.roleBox img{
+  align-items: center;
 }
 
 .roleBox .text{
+  text-align: center;
   position:relative;
   color: #fff;
-  font-size: 25px;
+  font-size: min(25px, 1.25rem);
   font-weight: 500;
   margin-right: 10px;
-}
-
-.text.sec-text:before{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  border-left: 2px solid lime;
-  animation: cursor .8s infinite, animate 4s steps(12) infinite;
 }
 
 @keyframes animate {
